@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+  }
+  
+  input[type="date"],
+  input[type="text"],
+  input[placeholder] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
