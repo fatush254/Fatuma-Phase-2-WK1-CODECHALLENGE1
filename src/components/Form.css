@@ -1,36 +1,67 @@
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+table {
+    border-collapse: collapse;
+    width: 96%;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 50px;
-  }
-  
-  #form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-  }
-  
-  input[type="date"],
-  input[type="text"],
-  input[placeholder] {
-    padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
-  }
-  
-  input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th, #submit{
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+#submit{
+    margin-top: 20px;
+    background-color: #d9d9d9;
+}
+
+input{
+    border-radius: 5px;
+    height: 25px;
+    border: 1px solid;
+    margin-right: 40px;
+    width: 200px;
+    margin-block-start: 10px;
+
+}
+
+div{
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+form {
+    border: 1px solid;
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 35px;
+    border-radius: 5px;
+    text-align: unset;
+}
+
+.search-box {
+    /* margin-bottom: 20px; */
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
+}
+
+.search-input {
+    width: 1350px;
+    margin-right: 50px;
+}
+
+form#form {
+    border: 1px solid;
+}
+
+div.sorter{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
