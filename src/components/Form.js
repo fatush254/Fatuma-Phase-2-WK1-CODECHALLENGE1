@@ -8,7 +8,7 @@ function Form() {
   
   // State variables for transactions, form data, search term, sort criteria, and sort order
   const [transactions, setTransactions] = useState(initialTransactions);
-  const [formData, setFormData] = useState({
+  const [formDatas, setFormData] = useState({
     date: "",
     description: "",
     category: "",
@@ -16,16 +16,16 @@ function Form() {
   });
   const [searchTerm, setSearchTerm] = useState("");
   const [sortCriteria, setSortCriteria] = useState(null);
-  const [sortOrder, setSortOrder] = useState("asc"); // "asc" or "desc"
+  const [sortOrders, setSortOrder] = useState("asc"); // "asc" or "desc"
 
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTransactions([...transactions, formData]);
+    setTransactions([...transactions, formDatas]);
     setFormData({
       date: "",
       description: "",
-      category: "",
+      categorys: "",
       amount: ""
     });
   };
@@ -34,7 +34,7 @@ function Form() {
   const handleInput = (e) => {
     const { id, value } = e.target;
     setFormData({
-      ...formData,
+      ...formDatas,
       [id]: value
     });
   };
@@ -51,7 +51,7 @@ const sortTransactions = () => {
   const filtered = filterTransactions(); // Filter transactions based on search term
   if (sortCriteria) {
     const sorted = [...filtered].sort((a, b) => {
-      if (sortOrder === "asc") {
+      if (sortOrders === "asc") {
         return a[sortCriteria].localeCompare(b[sortCriteria]);
       } else {
         return b[sortCriteria].localeCompare(a[sortCriteria]);
@@ -99,7 +99,7 @@ const sortTransactions = () => {
           <input
             type="date"
             id="date"
-            value={formData.date}
+            value={formDatas.date}
             onChange={handleInput}
           />
 
@@ -107,7 +107,7 @@ const sortTransactions = () => {
             type="text"
             id="description"
             placeholder="Description"
-            value={formData.description}
+            value={formDatas.description}
             onChange={handleInput}
           />
 
@@ -115,7 +115,7 @@ const sortTransactions = () => {
             type="text"
             id="category"
             placeholder="Category"
-            value={formData.category}
+            value={formDatas.category}
             onChange={handleInput}
           />
 
@@ -123,7 +123,7 @@ const sortTransactions = () => {
             type="text"
             id="amount"
             placeholder='Amount'
-            value={formData.amount}
+            value={formDatas.amount}
             onChange={handleInput}
           />
         </div>
